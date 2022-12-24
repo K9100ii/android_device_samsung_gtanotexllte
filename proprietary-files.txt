@@ -1,0 +1,28 @@
+# RIL - From A305GUBU8CVK1
+# Only modification made: libsec-ril.so has been patched to load libprotobuf-cpp-full.so instead
+# of libprotobuf-cpp-full-3.9.1.so:
+#  $ ../../../../prebuilts/extract-tools/linux-x86/bin/patchelf-0_9 --replace-needed libprotobuf-cpp-full-3.9.1.so libprotobuf-cpp-full.so vendor/lib64/libsec-ril.so
+-vendor/bin/cbd
+-vendor/bin/hw/rild
+vendor/etc/plmn_delta.bin
+vendor/etc/plmn_delta_attaio.bin
+vendor/etc/plmn_delta_hktw.bin
+vendor/etc/plmn_delta_usagsm.bin
+vendor/etc/plmn_se13.bin
+-vendor/lib64/libengmode_client.so
+-vendor/lib64/libvkmanager_vendor.so
+-vendor/lib64/libfloatingfeature.so
+-vendor/lib64/libril.so
+-vendor/lib64/libsec-ril.so
+-vendor/lib64/libsecnativefeature.so
+-vendor/lib64/libsemnativecarrierfeature.so
+-vendor/lib64/vendor.samsung.hardware.radio@2.0.so
+-vendor/lib64/vendor.samsung.hardware.radio@2.1.so
+-vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+-vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
+
+# GPS - From A720SKSU5CUJ2
+-vendor/bin/hw/gpsd
+vendor/etc/gnss/ca.pem
+-vendor/lib64/hw/gps.default.so
+-vendor/lib64/libwrappergps.so
