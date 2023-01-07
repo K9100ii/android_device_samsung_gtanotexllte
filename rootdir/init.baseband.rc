@@ -37,7 +37,7 @@ on post-fs-data
     chown radio radio /efs/.nv_state
 
 # Modem boot daemon
-service cpboot-daemon /vendor/bin/cbd -d -tss310 -bm -mm -P platform/13540000.dwmmc0/by-name/RADIO -n /efs
+service cpboot-daemon /vendor/bin/cbd_note -d -tss310 -bm -mm -P platform/13540000.dwmmc0/by-name/RADIO
     class main
     user root
     group radio cache inet misc audio sdcard_rw log sdcard_r shell system
