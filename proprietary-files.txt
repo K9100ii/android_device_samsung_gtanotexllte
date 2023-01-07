@@ -1,8 +1,14 @@
+# cbd - For gtaxllte - From A305GUBU8CVK1
+-vendor/bin/cbd
+
+# cbd - For gtanotexllte - From T585XXS7CUI5
+# Newer cbd from A305GUBU8CVK1 apparently doesn't work for some note devices
+-vendor/bin/cbd_note
+
 # RIL - From A305GUBU8CVK1
 # Only modification made: libsec-ril.so has been patched to load libprotobuf-cpp-full.so instead
 # of libprotobuf-cpp-full-3.9.1.so:
 #  $ ../../../../prebuilts/extract-tools/linux-x86/bin/patchelf-0_9 --replace-needed libprotobuf-cpp-full-3.9.1.so libprotobuf-cpp-full.so vendor/lib64/libsec-ril.so
--vendor/bin/cbd
 -vendor/bin/hw/rild
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
