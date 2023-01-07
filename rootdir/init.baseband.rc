@@ -27,6 +27,15 @@ on post-fs-data
     mkdir /data/vendor 0771 radio system
     mkdir /data/vendor/log 0771 radio system
 
+    # Correcting incorrect permissions that these
+    # files have on some devices as shipped
+    chown radio radio /efs/nv_data.bin
+    chown radio radio /efs/nv_data.bin.md5
+    chown radio radio /efs/nv.log
+    chown radio radio /efs/.nv_data.bak
+    chown radio radio /efs/.nv_data.bak.md5
+    chown radio radio /efs/.nv_state
+
 # Modem boot daemon
 service cpboot-daemon /vendor/bin/cbd -d -tss310 -bm -mm -P platform/13540000.dwmmc0/by-name/RADIO -n /efs
     class main
