@@ -25,17 +25,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_tablet.mk)
 
-## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_gtanotexllte
+# Device identifiers. These must come after all inclusions.
 PRODUCT_DEVICE := gtanotexllte
 PRODUCT_MODEL := SM-P585
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
+PRODUCT_NAME := lineage_gtanotexllte
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="gtanotexllte" \
-    PRIVATE_BUILD_DESC="gtanotexllteub-user 8.1.0 M1AJQ P585MUBU2CUF2 release-keys"
+    PRIVATE_BUILD_DESC="gtanotexllteub-user 8.1.0 M1AJQ P585MUBU2CUF2 release-keys" \
+    PRODUCT_NAME="gtanotexllte"
 
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+# Set the build fingerprint
 BUILD_FINGERPRINT := google/ryu/dragon:8.1.0/OPM1.171019.016/4503492:user/release-keys

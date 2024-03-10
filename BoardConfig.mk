@@ -14,14 +14,13 @@
 # limitations under the License.
 #
 
+DEVICE_PATH := device/samsung/gtanotexllte
+
 # Inherit from gtaxl-common
 include device/samsung/gtaxl-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/samsung/gtanotexllte
-
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-ENABLE_VENDOR_RIL_SERVICE := true
+# HIDL
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/device_manifest.xml
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineage-gtanotexllte_defconfig
@@ -36,5 +35,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 10658775040
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
-# HIDL
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/device_manifest.xml
+# RIL
+BOARD_PROVIDES_LIBRIL := true
+ENABLE_VENDOR_RIL_SERVICE := true

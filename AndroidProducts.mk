@@ -13,8 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_gtanotexllte.mk
-
 COMMON_LUNCH_CHOICES := \
     lineage_gtanotexllte-userdebug
+
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/lineage_gtanotexllte.mk

@@ -5,6 +5,12 @@
 # Newer cbd from A305GUBU8CVK1 apparently doesn't work for some note devices
 -vendor/bin/cbd_note
 
+# GPS - From A720SKSU5CUJ2
+-vendor/bin/hw/gpsd
+vendor/etc/gnss/ca.pem
+-vendor/lib64/libwrappergps.so
+-vendor/lib64/hw/gps.default.so
+
 # RIL - From A305GUBU8CWE3
 # Only modification made: libsec-ril.so has been patched to load libprotobuf-cpp-full.so instead
 # of libprotobuf-cpp-full-3.9.1.so:
@@ -27,9 +33,3 @@ vendor/etc/plmn_se13.bin
 -vendor/lib64/vendor.samsung.hardware.radio@2.1.so
 -vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
-
-# GPS - From A720SKSU5CUJ2
--vendor/bin/hw/gpsd
-vendor/etc/gnss/ca.pem
--vendor/lib64/hw/gps.default.so
--vendor/lib64/libwrappergps.so
