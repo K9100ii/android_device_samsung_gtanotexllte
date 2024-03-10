@@ -12,12 +12,3 @@ on post-fs-data
 
 on property:vts.native_server.on=*
     setprop ril.vendor.vts.native_server.on ${vts.native_server.on}
-
-service secril_config /vendor/bin/secril_config_svc
-    user radio
-    group radio
-    oneshot
-    disabled
-
-on post-fs-data
-    exec_start secril_config

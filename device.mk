@@ -50,8 +50,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4:64 \
     android.hardware.radio.config@1.2:64 \
-    android.hardware.radio.deprecated@1.0:64 \
-    secril_config_svc
+    android.hardware.radio.deprecated@1.0:64
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
